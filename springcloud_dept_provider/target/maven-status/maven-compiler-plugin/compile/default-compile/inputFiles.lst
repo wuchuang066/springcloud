@@ -1,0 +1,8 @@
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\contoller\DeptController.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\mapper\DeptMapper.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\service\DeptService.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\util\PageUtil.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\util\CorsConfig.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\SpringCloudDeptProviderApplication.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\config\FeignBeanFactoryPostProcessor.java
+D:\IdeaProjects\springCloud\springcloud_dept_provider\src\main\java\com\zpark\service\impl\DeptServiceImpl.java

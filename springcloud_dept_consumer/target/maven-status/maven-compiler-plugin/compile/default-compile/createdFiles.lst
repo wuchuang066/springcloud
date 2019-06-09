@@ -1,0 +1,6 @@
+zpark\config\FeignBeanFactoryPostProcessor.class
+zpark\controller\DeptConsumerController.class
+zpark\SpringCloudDeptConsumerApplication.class
+zpark\config\RestTemplateConfig.class
+zpark\enumcase\UrlEnum.class
+zpark\util\UrlUtil.class

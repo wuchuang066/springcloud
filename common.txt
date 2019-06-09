@@ -1,0 +1,10 @@
+springcloud_dept_provider     server.port = 8081
+springcloud_emp_provider      server.port = 8082
+springcloud_dept_consumer     server.port = 8083
+springcloud_emp_consumer      server.port = 8084
+
+
+
+
+
+

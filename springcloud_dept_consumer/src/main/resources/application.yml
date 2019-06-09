@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: springcloud-dept-consumer
+##    关闭热部署
+#  devtools:
+#    restart:
+#      enabled : false
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka01:8761/eureka,http://eureka02:8762/eureka,http://eureka03:8763/eureka

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud_eureka_01" />
+        <module name="springcloud_dept_provider" />
+        <module name="springcloud_eureka_03" />
+        <module name="springcloud_emp_provider03" />
+        <module name="springcloud_emp_provider" />
+        <module name="springcloud_emp_consumer" />
+        <module name="springcloud_dept_consumer" />
+        <module name="springcloud_dept_provider03" />
+        <module name="springcloud_dept_provider02" />
+        <module name="springcloud_emp_provider02" />
+        <module name="springcloud_common" />
+        <module name="springcloud_eureka_02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="springcloud" target="1.8" />
+      <module name="springcloud_common" target="1.8" />
+      <module name="springcloud_dept_consumer" target="1.8" />
+      <module name="springcloud_dept_provider" target="1.8" />
+      <module name="springcloud_dept_provider02" target="1.8" />
+      <module name="springcloud_dept_provider03" target="1.8" />
+      <module name="springcloud_emp_consumer" target="1.8" />
+      <module name="springcloud_emp_provider" target="1.8" />
+      <module name="springcloud_emp_provider02" target="1.8" />
+      <module name="springcloud_emp_provider03" target="1.8" />
+      <module name="springcloud_eureka_01" target="1.8" />
+      <module name="springcloud_eureka_02" target="1.8" />
+      <module name="springcloud_eureka_03" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springcloud" options="" />
+      <module name="springcloud_common" options="" />
+      <module name="springcloud_dept_provider" options="" />
+      <module name="springcloud_emp_provider" options="" />
+    </option>
+  </component>
+</project>

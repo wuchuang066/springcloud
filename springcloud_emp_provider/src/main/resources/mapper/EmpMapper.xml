@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zpark.mapper.EmpMapper">
+  <resultMap id="BaseResultMap" type="com.zpark.pojo.Emp">
+    <id column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="emp_job" jdbcType="VARCHAR" property="empJob" />
+    <result column="emp_salary" jdbcType="DOUBLE" property="empSalary" />
+    <result column="deptno" jdbcType="INTEGER" property="deptno" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from emp
+    where emp_id = #{empId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zpark.pojo.Emp">
+    insert into emp (emp_id, emp_name, emp_job, 
+      emp_salary, deptno)
+    values (#{empId,jdbcType=INTEGER}, #{empName,jdbcType=VARCHAR}, #{empJob,jdbcType=VARCHAR}, 
+      #{empSalary,jdbcType=DOUBLE}, #{deptno,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.zpark.pojo.Emp">
+    update emp
+    set emp_name = #{empName,jdbcType=VARCHAR},
+      emp_job = #{empJob,jdbcType=VARCHAR},
+      emp_salary = #{empSalary,jdbcType=DOUBLE},
+      deptno = #{deptno,jdbcType=INTEGER}
+    where emp_id = #{empId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select emp_id, emp_name, emp_job, emp_salary, deptno
+    from emp
+    where emp_id = #{empId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_id, emp_name, emp_job, emp_salary, deptno
+    from emp
+  </select>
+  
+  
+  <select id="findEmpAndDept" parameterType="com.zpark.pojo.Emp"  resultMap="empResultMap">
+  	select e.emp_id,e.emp_name,e.emp_job,e.emp_salary,e.deptno,d.dept_id,d.dept_name,d.dept_loc 
+  	from emp e JOIN dept d on e.deptno=d.dept_id 
+  	<include refid="nameAndDeptno"></include>
+  </select>
+  
+  <sql id="nameAndDeptno">
+		<where>
+			<if test="empName!=null and empName!=''">
+			 and e.emp_name like #{empName}
+			</if>
+			<if test="deptno!=-1">
+			 and e.deptno = #{deptno}
+			</if>
+		</where>
+	</sql>
+	
+	<resultMap type="com.zpark.pojo.Emp" id="empResultMap">
+	    <id column="emp_id" jdbcType="INTEGER" property="empId" />
+	    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+	    <result column="emp_job" jdbcType="VARCHAR" property="empJob" />
+	    <result column="emp_salary" jdbcType="DOUBLE" property="empSalary" />
+	    <result column="deptno" jdbcType="INTEGER" property="deptno" />
+	    <association property="dept" javaType="Dept">
+	        <id column="dept_id" jdbcType="INTEGER" property="deptId" />
+		    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+		    <result column="dept_loc" jdbcType="VARCHAR" property="deptLoc" />
+	    </association>
+    </resultMap>
+  
+  
+  
+</mapper>
