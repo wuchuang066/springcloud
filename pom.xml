@@ -56,7 +56,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.47</version>
+                <version>8.0.16</version>
             </dependency>
             <!-- 导入 Druid 数据库连接池的依赖,Druid 是阿里巴巴开源平台的一个数据库连接池的实现，所说是现在最好的数据库连接池 -->
             <dependency>
